@@ -15,5 +15,9 @@ jobs:
           node-version: '22'
       - name: Install dependencies
         run: npm install
-      - name: Check style
+      - name: Lint - Check style
         run: npm run eslint
+      - name: Build - Generate code to production
+        run: npm run build
+      - name: Test - Test code
+        run: npm run test
